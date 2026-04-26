@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonzi | NFT Artist</title>
+    <title>Bonzi | NFT Drawing Artist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        
         .logo-font { font-family: 'Space Grotesk', sans-serif; }
-        .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%); }
-        .card-hover:hover { transform: translateY(-12px) scale(1.04); }
+        .hero-bg { 
+            background: linear-gradient(135deg, #0f0a1f 0%, #1a0033 50%, #2a0a3d 100%);
+        }
+        .neon-text { text-shadow: 0 0 20px #c026d3, 0 0 40px #a855f7; }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-15px) rotate(1deg) scale(1.03);
+            box-shadow: 0 30px 70px -10px rgb(192 38 211);
+        }
+        .cat-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
     </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body class="bg-zinc-950 text-white overflow-x-hidden">
 
     <!-- NAVBAR -->
-    <nav class="bg-black/90 backdrop-blur-lg border-b border-zinc-800 sticky top-0 z-50">
+    <nav class="bg-black/80 backdrop-blur-xl border-b border-purple-500/20 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-x-3">
-                <img src="https://pbs.twimg.com/profile_images/2042960963998224391/HiVzfy5M.jpg" 
-                     alt="Bonzi" class="w-10 h-10 rounded-2xl border-2 border-purple-500">
-                <h1 class="logo-font text-3xl font-bold">BONZI</h1>
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-2xl cat-float">🐱</div>
+                <h1 class="logo-font text-4xl font-bold tracking-tighter neon-text">BONZI</h1>
             </div>
             
-            <div class="hidden md:flex items-center gap-x-10 text-sm">
+            <div class="hidden md:flex gap-x-10 text-sm font-medium">
                 <a href="#accueil" class="hover:text-purple-400">Accueil</a>
                 <a href="#apropos" class="hover:text-purple-400">À propos</a>
-                <a href="#galerie" class="hover:text-purple-400">Galerie</a>
+                <a href="#galerie" class="hover:text-purple-400">Galerie BACC</a>
                 <a href="#contact" class="hover:text-purple-400">Contact</a>
             </div>
 
-            <a href="https://crypto.com/nft/profile/mrbonsaii" target="_blank" 
-               class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl font-medium flex items-center gap-2">
+            <a href="https://crypto.com/nft/profile/mrbonsaii" target="_blank"
+               class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl font-semibold flex items-center gap-2 hover:scale-105">
                 <i class="fa-solid fa-crown"></i> Profil Cronos
             </a>
         </div>
@@ -41,66 +57,75 @@
     <!-- HERO -->
     <header id="accueil" class="hero-bg min-h-screen flex items-center relative">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 via-purple-500 to-emerald-400 text-black px-6 py-3 rounded-3xl font-medium text-sm">
-                    <span>SOLANA</span>
-                    <span class="w-px h-4 bg-black/30"></span>
-                    <span>BITCOIN</span>
-                    <span class="w-px h-4 bg-black/30"></span>
-                    <span>CRO</span>
+            <div class="space-y-10">
+                <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md rounded-3xl border border-purple-400/30">
+                    <span class="text-emerald-400">●</span>
+                    <span class="text-sm font-medium">LIVE ON CRONOS • OPEN TO SOLANA</span>
                 </div>
                 
-                <h2 class="text-7xl md:text-8xl font-bold leading-none logo-font tracking-tighter">
+                <h2 class="text-7xl md:text-[5.5rem] font-bold leading-none logo-font tracking-tighter neon-text">
                     BONZI<br>ART
                 </h2>
                 
                 <p class="text-2xl text-zinc-300 max-w-lg">
-                    Dessins NFT uniques • Multichain<br>
-                    <span class="text-purple-400">Solana • Bitcoin • Cronos</span>
+                    Dessins NFT qui vibrent.<br>
+                    Maîtres chats de la <span class="text-pink-400">BACC Collection</span> sur Cronos.
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#galerie" 
-                       class="px-10 py-5 bg-white text-black rounded-3xl font-semibold text-lg flex items-center gap-3 hover:bg-purple-400 hover:text-white">
-                        Voir ma Galerie
+                    <a href="#galerie" class="px-10 py-6 bg-white text-black rounded-3xl font-bold text-xl flex items-center gap-3 hover:bg-pink-400">
+                        Explorer les Chats 🐱
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    
-                    <a href="https://crypto.com/nft/profile/mrbonsaii" target="_blank"
-                       class="px-8 py-5 border border-white/40 hover:border-white rounded-3xl text-lg">
-                        Profil Cronos
+                    <a href="https://x.com/BonziArt" target="_blank" 
+                       class="px-8 py-6 border border-white/40 hover:border-white rounded-3xl text-lg flex items-center gap-3">
+                        <i class="fa-brands fa-x-twitter"></i> @BonziArt
                     </a>
+                </div>
+                
+                <div class="flex items-center gap-8 pt-6">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-emerald-400">CRO</div>
+                        <div class="text-xs text-zinc-400">Cronos</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold">SOL</div>
+                        <div class="text-xs text-zinc-400">Solana</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold">₿</div>
+                        <div class="text-xs text-zinc-400">Bitcoin</div>
+                    </div>
                 </div>
             </div>
             
-            <div class="flex justify-center">
-                <img src="https://pbs.twimg.com/profile_images/2042960963998224391/HiVzfy5M.jpg" 
-                     class="w-96 h-96 object-cover rounded-3xl border-8 border-purple-500/30 shadow-2xl" alt="Bonzi">
+            <div class="relative flex justify-center">
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20 blur-3xl rounded-[4rem]"></div>
+                <img src="https://pbs.twimg.com/media/HGgvBbFXcAAJrdi.jpg" 
+                     class="w-96 h-96 object-cover rounded-3xl shadow-2xl border-8 border-purple-500/40 cat-float" alt="BACC Cat">
             </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 text-xs tracking-widest flex flex-col items-center">
+            SCROLL POUR DÉCOUVRIR L’UNIVERS BACC
+            <i class="fa-solid fa-chevron-down animate-bounce mt-2"></i>
         </div>
     </header>
 
     <!-- À PROPOS -->
     <section id="apropos" class="max-w-7xl mx-auto px-6 py-24">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-5xl font-bold logo-font mb-8">Salut, je suis Bonzi 🎨</h2>
-            <p class="text-xl text-zinc-300">
-                Artiste NFT passionné par le dessin digital. 
-                J’adore créer sur <strong>Solana</strong>, <strong>Bitcoin</strong> (Ordinals) et surtout sur <strong>Cronos</strong> avec ma collection <strong>BACC</strong>.
-            </p>
-            <div class="mt-10 flex justify-center gap-8 text-sm">
-                <div class="text-center">
-                    <div class="text-4xl">SOL</div>
-                    <div class="text-emerald-400">Solana</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl">₿</div>
-                    <div class="text-orange-400">Bitcoin</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl">CRO</div>
-                    <div class="text-purple-400">Cronos</div>
-                </div>
+        <div class="grid md:grid-cols-12 gap-16 items-center">
+            <div class="md:col-span-7 space-y-8">
+                <h2 class="text-6xl font-bold logo-font">Je suis Bonzi, créateur de chats qui claquent 🐱</h2>
+                <p class="text-xl text-zinc-300">
+                    Artiste NFT passionné par le drawing digital. Ma collection <strong>BACC</strong> sur <strong>Cronos</strong> est mon bébé. 
+                    J’aime l’énergie de Solana et le côté iconique de Bitcoin, mais je crée principalement sur Cronos.
+                </p>
+            </div>
+            <div class="md:col-span-5 bg-zinc-900/70 border border-purple-500/30 rounded-3xl p-10">
+                <div class="text-6xl mb-6">🎨</div>
+                <p class="italic text-lg">"Chaque chat que je dessine porte une vibe unique. Collectionnable, fun et plein d’attitude."</p>
+                <div class="mt-10 text-pink-400 text-sm">— Bonzi, 2026</div>
             </div>
         </div>
     </section>
@@ -108,48 +133,36 @@
     <!-- GALERIE -->
     <section id="galerie" class="bg-black py-24">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-5xl font-bold logo-font">Ma Galerie Multichain</h2>
-                <p class="text-purple-400 mt-3">BACC Collection • Chats exclusifs sur Cronos</p>
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm">BACC COLLECTION • CRONOS</span>
+                <h2 class="text-6xl font-bold logo-font mt-4">Mes Chats NFT</h2>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- BACC Collection -->
                 <div class="card-hover bg-zinc-900 rounded-3xl overflow-hidden">
                     <a href="https://crypto.com/nft/collection/bc26083ea246ec5a74e780970d9b4b32?tab=items" target="_blank">
-                        <img src="https://pbs.twimg.com/media/HGgvBbFXcAAJrdi.jpg" 
-                             class="w-full h-80 object-cover" alt="BACC">
-                        <div class="p-6">
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <div class="font-semibold text-xl">BACC Collection 🐱</div>
-                                    <div class="text-emerald-400 text-sm">Cronos • Meilleure collection</div>
-                                </div>
-                                <i class="fa-solid fa-crown text-yellow-400"></i>
-                            </div>
+                        <img src="https://pbs.twimg.com/media/HGgvBbFXcAAJrdi.jpg" class="w-full h-80 object-cover" alt="BACC">
+                        <div class="p-8">
+                            <div class="font-bold text-2xl">BACC Collection 🐱</div>
+                            <div class="text-emerald-400">La meilleure • Clique pour tout voir</div>
                         </div>
                     </a>
                 </div>
                 
-                <!-- Autres -->
                 <div class="card-hover bg-zinc-900 rounded-3xl overflow-hidden">
                     <a href="https://crypto.com/nft/profile/mrbonsaii" target="_blank">
-                        <img src="https://pbs.twimg.com/media/HGlt-DNXsAAoRuV.jpg" 
-                             class="w-full h-80 object-cover">
-                        <div class="p-6">
-                            <div class="font-semibold">Autres Œuvres</div>
-                            <div class="text-zinc-400 text-sm">Solana • Bitcoin • Cronos</div>
+                        <img src="https://pbs.twimg.com/media/HGlt-DNXsAAoRuV.jpg" class="w-full h-80 object-cover">
+                        <div class="p-8">
+                            <div class="font-bold text-2xl">Autres Dessins</div>
+                            <div class="text-zinc-400">Plus d’œuvres exclusives</div>
                         </div>
                     </a>
                 </div>
                 
-                <div class="card-hover bg-gradient-to-br from-purple-900/30 to-black border border-dashed border-purple-400 rounded-3xl p-12 flex flex-col items-center justify-center text-center">
-                    <div class="text-6xl mb-6">🌐</div>
-                    <p class="text-xl font-medium">Ouvert aux projets</p>
-                    <p class="text-sm text-zinc-400 mt-2">Sur Solana, Bitcoin et Cronos</p>
-                    <a href="#contact" class="mt-8 px-8 py-4 bg-white text-black rounded-3xl text-sm font-medium">
-                        Me contacter pour une collab
-                    </a>
+                <div class="card-hover bg-gradient-to-br from-purple-900 to-zinc-900 rounded-3xl p-12 flex flex-col justify-center items-center text-center border border-dashed border-pink-400">
+                    <div class="text-7xl mb-6">🌌</div>
+                    <p class="text-2xl font-medium">Tu veux ton propre chat custom ?</p>
+                    <a href="#contact" class="mt-10 px-10 py-5 bg-pink-600 rounded-3xl">Commande personnalisée →</a>
                 </div>
             </div>
         </div>
@@ -157,32 +170,34 @@
 
     <!-- CONTACT -->
     <section id="contact" class="max-w-7xl mx-auto px-6 py-24">
-        <div class="bg-zinc-900 border border-purple-500/30 rounded-3xl p-16 text-center">
-            <h2 class="text-5xl font-bold logo-font">Tu veux une pièce custom ?</h2>
-            <p class="mt-6 text-xl text-zinc-300">Peu importe la chaîne : Solana, Bitcoin ou Cronos, je suis partant !</p>
+        <div class="bg-gradient-to-br from-purple-950 to-black border border-purple-500/40 rounded-3xl p-16 text-center">
+            <h2 class="text-5xl font-bold logo-font">On crée ensemble ?</h2>
+            <p class="mt-6 text-xl text-zinc-300 max-w-md mx-auto">
+                Que tu sois sur Cronos, Solana ou Bitcoin, je suis ouvert aux collabs et commandes custom.
+            </p>
             
             <div class="flex flex-col sm:flex-row gap-6 justify-center mt-12">
                 <a href="https://x.com/BonziArt" target="_blank"
-                   class="px-10 py-6 bg-black border border-white/30 hover:border-white rounded-3xl text-xl flex items-center justify-center gap-3">
-                    <i class="fa-brands fa-x-twitter"></i> DM sur X
+                   class="px-12 py-7 bg-black border-2 border-white/30 hover:border-white rounded-3xl text-xl font-medium flex items-center justify-center gap-4">
+                    <i class="fa-brands fa-x-twitter text-2xl"></i> DM sur X
                 </a>
                 <a href="https://crypto.com/nft/profile/mrbonsaii" target="_blank"
-                   class="px-10 py-6 bg-emerald-600 rounded-3xl text-xl flex items-center justify-center gap-3">
+                   class="px-12 py-7 bg-emerald-600 rounded-3xl text-xl font-medium flex items-center justify-center gap-4">
                     <i class="fa-solid fa-crown"></i> Voir mon profil Cronos
                 </a>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-zinc-500 text-sm border-t border-zinc-800">
-        © 2026 BonziArt • Multichain Artist • Solana • Bitcoin • Cronos
+    <footer class="py-12 text-center text-zinc-500 border-t border-zinc-800">
+        © 2026 BonziArt • Créateur de la BACC Collection • Multichain Vibes
     </footer>
 
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', e => {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>

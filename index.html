@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonzi | NFT Drawing Artist</title>
+    <title>Bonzi | NFT Artist</title>
+    <!-- Favicon avec ta photo -->
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/2042960963998224391/HiVzfy5M.jpg" type="image/jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -32,41 +34,43 @@
                 <h1 class="logo-font text-4xl font-bold tracking-tighter neon-text">BONZI</h1>
             </div>
             
-            <div class="hidden md:flex gap-x-10 text-sm font-medium">
-                <a href="#accueil" class="hover:text-purple-400">Accueil</a>
-                <a href="#apropos" class="hover:text-purple-400">À propos</a>
-                <a href="#galerie" class="hover:text-purple-400">Galerie</a>
-                <a href="#contact" class="hover:text-purple-400">Contact</a>
+            <div class="hidden md:flex items-center gap-x-8">
+                <a href="#home" class="hover:text-purple-400 lang-en">Home</a>
+                <a href="#about" class="hover:text-purple-400 lang-en">About</a>
+                <a href="#gallery" class="hover:text-purple-400 lang-en">Gallery</a>
+                <a href="#contact" class="hover:text-purple-400 lang-en">Contact</a>
+                
+                <!-- Language Switcher -->
+                <div class="flex gap-2 border-l border-zinc-700 pl-8">
+                    <button onclick="changeLang('en')" class="lang-btn px-3 py-1 rounded-lg text-sm font-medium active">EN</button>
+                    <button onclick="changeLang('fr')" class="lang-btn px-3 py-1 rounded-lg text-sm font-medium">FR</button>
+                    <button onclick="changeLang('nl')" class="lang-btn px-3 py-1 rounded-lg text-sm font-medium">NL</button>
+                </div>
             </div>
-
-            <a href="https://crypto.com/nft/profile/mrbonsaii" target="_blank"
-               class="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl font-semibold flex items-center gap-2">
-                <i class="fa-solid fa-crown"></i> Profil Cronos
-            </a>
         </div>
     </nav>
 
     <!-- HERO -->
-    <header id="accueil" class="hero-bg min-h-screen flex items-center relative">
+    <header id="home" class="hero-bg min-h-screen flex items-center relative">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-10">
                 <div class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-md rounded-3xl border border-purple-400/30">
                     <span class="text-emerald-400">●</span>
-                    <span class="text-sm font-medium">BACC COLLECTION • CRONOS</span>
+                    <span class="text-sm font-medium lang-en">BACC COLLECTION • CRONOS</span>
                 </div>
                 
                 <h2 class="text-7xl md:text-[5.5rem] font-bold leading-none logo-font tracking-tighter neon-text">
-                    BONZI<br>ART
+                    BONZI
                 </h2>
                 
-                <p class="text-2xl text-zinc-300 max-w-lg">
-                    Artiste NFT spécialisé dans les chats stylés.<br>
-                    Créateur de la <span class="text-pink-400">BACC Collection</span>
+                <p class="text-2xl text-zinc-300 max-w-lg lang-en">
+                    NFT Artist specialized in stylish cats.<br>
+                    Creator of the <span class="text-pink-400">BACC Collection</span>
                 </p>
                 
                 <div class="flex flex-wrap gap-4">
-                    <a href="#galerie" class="px-10 py-6 bg-white text-black rounded-3xl font-bold text-xl flex items-center gap-3 hover:bg-pink-400">
-                        Découvrir les Chats 🐱
+                    <a href="#gallery" class="px-10 py-6 bg-white text-black rounded-3xl font-bold text-xl flex items-center gap-3 hover:bg-pink-400 lang-en">
+                        Discover the Cats 🐱
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="https://x.com/BonziArt" target="_blank" 
@@ -84,16 +88,14 @@
     </header>
 
     <!-- GALERIE -->
-    <section id="galerie" class="bg-black py-24">
+    <section id="gallery" class="bg-black py-24">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="px-5 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm">BACC COLLECTION</span>
-                <h2 class="text-6xl font-bold logo-font mt-4">Mes NFTs</h2>
+                <h2 class="text-6xl font-bold logo-font mt-4 lang-en">My NFTs</h2>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Tes images locales (PNG) -->
                 <div class="card-hover bg-zinc-900 rounded-3xl overflow-hidden">
                     <img src="elegant.jpg.png" class="w-full h-80 object-cover" alt="Elegant Sphynx">
                     <div class="p-6">
@@ -118,13 +120,12 @@
                     </div>
                 </div>
                 
-                <!-- BACC Collection complète -->
                 <div class="card-hover bg-zinc-900 rounded-3xl overflow-hidden">
                     <a href="https://crypto.com/nft/collection/bc26083ea246ec5a74e780970d9b4b32?tab=items" target="_blank">
-                        <img src="https://pbs.twimg.com/media/HGgvBbFXcAAJrdi.jpg" class="w-full h-80 object-cover" alt="BACC">
+                        <img src="https://pbs.twimg.com/media/HGgvBbFXcAAJrdi.jpg" class="w-full h-80 object-cover">
                         <div class="p-6">
-                            <div class="font-bold text-xl">Toute la BACC Collection 🐱</div>
-                            <div class="text-emerald-400 text-sm">Voir tous les items sur Crypto.com</div>
+                            <div class="font-bold text-xl lang-en">Full BACC Collection 🐱</div>
+                            <div class="text-emerald-400 text-sm">View on Crypto.com</div>
                         </div>
                     </a>
                 </div>
@@ -132,19 +133,19 @@
         </div>
     </section>
 
-    <!-- À PROPOS -->
-    <section id="apropos" class="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h2 class="text-5xl font-bold logo-font">Créateur de chats qui claquent</h2>
-        <p class="mt-6 text-xl text-zinc-300 max-w-2xl mx-auto">
-            Passionné par le drawing digital sur Cronos. Ouvert aux collaborations sur Solana également.
+    <!-- ABOUT -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-24 text-center">
+        <h2 class="text-5xl font-bold logo-font lang-en">Creator of stylish cats</h2>
+        <p class="mt-6 text-xl text-zinc-300 max-w-2xl mx-auto lang-en">
+            Passionate digital artist on Cronos. Open to collaborations on Solana too.
         </p>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
         <div class="bg-gradient-to-br from-purple-950 to-black border border-purple-500/40 rounded-3xl p-16 text-center">
-            <h2 class="text-5xl font-bold logo-font">Tu veux ton propre chat NFT ?</h2>
-            <p class="mt-6 text-xl text-zinc-300">Contacte-moi sur X !</p>
+            <h2 class="text-5xl font-bold logo-font lang-en">Want your own cat NFT?</h2>
+            <p class="mt-6 text-xl text-zinc-300 lang-en">Hit me up on X!</p>
             
             <a href="https://x.com/BonziArt" target="_blank"
                class="mt-10 inline-flex items-center gap-4 px-12 py-7 bg-black border-2 border-white/30 hover:border-white rounded-3xl text-xl">
@@ -155,10 +156,44 @@
     </section>
 
     <footer class="py-12 text-center text-zinc-500 border-t border-zinc-800">
-        © 2026 BonziArt • BACC Collection on Cronos
+        © 2026 Bonzi • BACC Collection on Cronos
     </footer>
 
     <script>
+        function changeLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-purple-600', 'text-white');
+                if (btn.textContent.toLowerCase() === lang) {
+                    btn.classList.add('active', 'bg-purple-600', 'text-white');
+                }
+            });
+
+            // Simple translation (you can expand this)
+            if (lang === 'fr') {
+                document.querySelectorAll('.lang-en').forEach(el => {
+                    if (el.textContent.includes("Discover the Cats")) el.textContent = "Découvrir les Chats 🐱";
+                    if (el.textContent.includes("My NFTs")) el.textContent = "Mes NFTs";
+                    if (el.textContent.includes("Full BACC Collection")) el.textContent = "Toute la Collection BACC 🐱";
+                    if (el.textContent.includes("Creator of stylish cats")) el.textContent = "Créateur de chats qui claquent";
+                    if (el.textContent.includes("Want your own cat NFT?")) el.textContent = "Tu veux ton propre chat NFT ?";
+                    if (el.textContent.includes("Hit me up on X!")) el.textContent = "Contacte-moi sur X !";
+                });
+            } else if (lang === 'nl') {
+                document.querySelectorAll('.lang-en').forEach(el => {
+                    if (el.textContent.includes("Discover the Cats")) el.textContent = "Ontdek de Katten 🐱";
+                    if (el.textContent.includes("My NFTs")) el.textContent = "Mijn NFTs";
+                    if (el.textContent.includes("Full BACC Collection")) el.textContent = "Volledige BACC Collectie 🐱";
+                    if (el.textContent.includes("Creator of stylish cats")) el.textContent = "Maker van stijlvolle katten";
+                    if (el.textContent.includes("Want your own cat NFT?")) el.textContent = "Wil je je eigen kat NFT?";
+                    if (el.textContent.includes("Hit me up on X!")) el.textContent = "Stuur me een bericht op X!";
+                });
+            } else {
+                // Reset to English
+                location.reload();
+            }
+        }
+
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', e => {
                 e.preventDefault();

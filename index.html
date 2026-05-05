@@ -9,16 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
-        
         .logo-font { font-family: 'Space Grotesk', sans-serif; }
         .hero-bg { background: linear-gradient(135deg, #0f0a1f 0%, #1a0033 100%); }
         .neon-text { text-shadow: 0 0 25px #c026d3, 0 0 50px #a855f7; }
-        
         .card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
         .card:hover { transform: translateY(-12px); }
-        
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -39,13 +34,20 @@
                 <a href="#contact" class="hover:text-purple-400">Contact</a>
             </div>
 
+            <!-- Social Links -->
             <div class="flex items-center gap-4">
-                <a href="https://x.com/BonziArt" target="_blank" class="hover:text-purple-400 text-2xl">
+                <a href="https://x.com/BonziArt" target="_blank" class="flex items-center gap-2 hover:text-purple-400">
                     <i class="fa-brands fa-x-twitter"></i>
+                    <span class="hidden sm:inline">@BonziArt</span>
+                </a>
+                <a href="https://x.com/BonsaiArtBACC" target="_blank" class="flex items-center gap-2 bg-purple-600 hover:bg-pink-600 px-5 py-2 rounded-3xl font-medium">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <span class="hidden sm:inline">@BonsaiArtBACC</span>
                 </a>
                 <a href="https://crypto.com/nft/profile/mrbonsaii" target="_blank"
                    class="bg-gradient-to-r from-purple-600 to-pink-600 px-5 py-3 rounded-3xl font-medium flex items-center gap-2">
-                    <i class="fa-solid fa-crown"></i> Cronos
+                    <i class="fa-solid fa-crown"></i>
+                    <span class="hidden sm:inline">Cronos</span>
                 </a>
             </div>
         </div>
@@ -58,12 +60,12 @@
                 <h1 class="text-7xl md:text-8xl font-bold logo-font neon-text">BONZI</h1>
                 <p class="text-2xl text-zinc-300">NFT Artist • Creator of BACC Collection</p>
                 
-                <div class="flex gap-4">
+                <div class="flex flex-wrap gap-4">
                     <a href="#gallery" class="px-8 py-5 bg-white text-black rounded-3xl font-bold text-lg hover:bg-pink-400">
                         View Gallery 🐱
                     </a>
-                    <a href="https://x.com/BonziArt" target="_blank" class="px-8 py-5 border border-white/40 rounded-3xl flex items-center gap-3">
-                        <i class="fa-brands fa-x-twitter"></i>
+                    <a href="https://x.com/BonsaiArtBACC" target="_blank" class="px-8 py-5 border border-white/40 rounded-3xl flex items-center gap-3">
+                        <i class="fa-brands fa-x-twitter"></i> Official BACC
                     </a>
                 </div>
             </div>
@@ -75,27 +77,19 @@
     <section id="gallery" class="py-24 bg-black">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="text-5xl font-bold logo-font text-center mb-16">BACC Collection</h2>
-            
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card bg-zinc-900 rounded-3xl overflow-hidden">
-                    <img src="elegant.jpg.png" class="w-full h-80 object-cover">
+                    <img src="elegant.png" class="w-full h-80 object-cover">
                     <div class="p-6">Elegant Sphynx</div>
                 </div>
                 <div class="card bg-zinc-900 rounded-3xl overflow-hidden">
-                    <img src="gangster.jpg.png" class="w-full h-80 object-cover">
+                    <img src="gangster.png" class="w-full h-80 object-cover">
                     <div class="p-6">Gangster Cat</div>
                 </div>
                 <div class="card bg-zinc-900 rounded-3xl overflow-hidden">
-                    <img src="inferno.jpg" class="w-full h-80 object-cover">
+                    <img src="inferno.png" class="w-full h-80 object-cover">
                     <div class="p-6">Inferno Sphynx</div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="https://crypto.com/nft/collection/bc26083ea246ec5a74e780970d9b4b32?tab=items" target="_blank"
-                   class="inline-flex items-center gap-3 text-purple-400 text-lg hover:text-purple-300">
-                    Voir toute la collection sur Crypto.com →
-                </a>
             </div>
         </div>
     </section>
@@ -107,26 +101,21 @@
             <p class="text-center text-zinc-400 mb-16">All prices in CRO • Minted on Cronos</p>
             
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="card bg-zinc-900 rounded-3xl p-8 text-center border border-purple-500/30">
+                <div class="card bg-zinc-900 rounded-3xl p-8 text-center">
                     <h3 class="text-2xl font-bold mb-2">Standard Cat</h3>
                     <div class="text-5xl font-bold text-purple-400 my-6">250 CRO</div>
-                    <p class="text-zinc-400 mb-8">Unique 1/1 drawing</p>
-                    <a href="https://x.com/BonziArt" target="_blank" class="block w-full py-4 bg-zinc-800 hover:bg-purple-600 rounded-2xl">DM to Buy</a>
+                    <a href="https://x.com/BonsaiArtBACC" target="_blank" class="block w-full py-4 bg-zinc-800 hover:bg-purple-600 rounded-2xl">DM to Buy</a>
                 </div>
-                
                 <div class="card bg-gradient-to-br from-purple-900 to-pink-900 rounded-3xl p-8 text-center scale-105 border-2 border-pink-400">
                     <div class="uppercase text-xs tracking-widest mb-2">Most Popular</div>
                     <h3 class="text-2xl font-bold mb-2">BACC Premium</h3>
                     <div class="text-5xl font-bold text-white my-6">450 CRO</div>
-                    <p class="text-zinc-300 mb-8">Detailed + animated version</p>
-                    <a href="https://x.com/BonziArt" target="_blank" class="block w-full py-4 bg-white text-black rounded-2xl font-bold">Get Yours</a>
+                    <a href="https://x.com/BonsaiArtBACC" target="_blank" class="block w-full py-4 bg-white text-black rounded-2xl font-bold">Get Yours</a>
                 </div>
-                
-                <div class="card bg-zinc-900 rounded-3xl p-8 text-center border border-purple-500/30">
+                <div class="card bg-zinc-900 rounded-3xl p-8 text-center">
                     <h3 class="text-2xl font-bold mb-2">Custom Cat</h3>
                     <div class="text-5xl font-bold text-purple-400 my-6">800+ CRO</div>
-                    <p class="text-zinc-400 mb-8">Your idea • Full custom</p>
-                    <a href="https://x.com/BonziArt" target="_blank" class="block w-full py-4 bg-zinc-800 hover:bg-purple-600 rounded-2xl">Commission Me</a>
+                    <a href="https://x.com/BonsaiArtBACC" target="_blank" class="block w-full py-4 bg-zinc-800 hover:bg-purple-600 rounded-2xl">Commission Me</a>
                 </div>
             </div>
         </div>
@@ -136,12 +125,15 @@
     <section id="contact" class="py-24">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-5xl font-bold logo-font">Let's make a cat together</h2>
-            <p class="mt-6 text-xl text-zinc-400">DM me on X for commissions or questions</p>
-            <a href="https://x.com/BonziArt" target="_blank"
-               class="mt-10 inline-flex items-center gap-4 px-10 py-6 bg-purple-600 rounded-3xl text-xl font-medium">
-                <i class="fa-brands fa-x-twitter text-3xl"></i>
-                Message me on X
-            </a>
+            <p class="mt-6 text-xl text-zinc-400">Follow the official BACC account & DM me</p>
+            <div class="flex justify-center gap-6 mt-10">
+                <a href="https://x.com/BonziArt" target="_blank" class="flex items-center gap-3 px-8 py-4 border border-white/40 rounded-3xl">
+                    <i class="fa-brands fa-x-twitter"></i> @BonziArt
+                </a>
+                <a href="https://x.com/BonsaiArtBACC" target="_blank" class="flex items-center gap-3 px-8 py-4 bg-purple-600 rounded-3xl">
+                    <i class="fa-brands fa-x-twitter"></i> @BonsaiArtBACC (Official)
+                </a>
+            </div>
         </div>
     </section>
 
@@ -150,18 +142,6 @@
     </footer>
 
     <script>
-        // Scroll Reveal
-        function reveal() {
-            document.querySelectorAll('.reveal').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight * 0.85) {
-                    el.classList.add('active');
-                }
-            });
-        }
-        window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal);
-
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', e => {
